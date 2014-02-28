@@ -8,10 +8,39 @@ div#main {
 
 footer {
   margin-top: 50px;
-  background-color: #000;
+  background-color: #7bcffe;
   color: #eee;
   text-align: center;
+  position: absolute;
+  bottom:0px;
+width:100%;
+
   p {
     line-height: 100px;
   }
 }
+.top-bar {
+  background: #7bcffe;
+ 
+}
+.button{background-color: #7bcffe;
+}
+
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.footer, .push {
+	height: 155px; /* .push must be the same height as .footer */
+}
+
+
