@@ -19,74 +19,12 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-
-  <body>
-  	<%= render :partial => 'layouts/header' %>
-	<!-- Main Page Content and Sidebar -->
- 
-  <div class="row">
- 
-    <!-- Main Blog Content -->
-    <div class="large-9 columns" role="content">
- 
-      <article>
- 
-        <h3><a href="#"><%= post = Post.first.title %></a></h3>
-        <h6>Written by <a href="#">John Smith</a> <%= Time.now.strftime("%d/%m/%Y") %></h6>
- 
-        <div class="row">
-          <div class="large-6 columns">
-            <p><%= post = Post.first.body %></p>
-            <p></p>
-          </div>
-          <div class="large-6 columns">
-            <img src="http://placehold.it/400x240&text=[img]" />
-          </div>
-        </div>
- 
-        <p></p>
- 
-        <p></p>
-  <%= link_to 'New Post', new_post_path %>
-      </article>
- 
+ <body>
+   <%= render :partial => 'layouts/header' %>
+<div id="main">
+     <%= yield %>
     </div>
- 
-    <!-- End Main Content -->
- 
- 
-    <!-- Sidebar -->
- 
-    <aside class="large-3 columns">
- 
-      <h5>Categories</h5>
-      <ul class="side-nav">
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Ruby on Rails</a></li>
-        <li><a href="#">Design</a></li>
-        <li><a href="#">HTML/CSS</a></li>
-        <li><a href="#">JavaScript</a></li>
-      </ul>
- 
-      <div class="panel">
-        <h5>Featured</h5>
-        <p>News Feed</p>
-        <a href="#">Read More →</a>
-      </div>
- 
-    </aside>
- 
-    <!-- End Sidebar -->
-  </div>
- 
-  <!-- End Main Content and Sidebar -->
- 
- 
-  <!-- Footer -->
- 
-  
     
-
   <%= render :partial => 'layouts/footer' %>
   </body>
 </html>
