@@ -1,31 +1,30 @@
 
- 
-  <div class="row">
+  <div class="row" >
  
     <!-- Main Blog Content -->
-    <div class="large-9 columns" role="content">
- 
+    <div class="large-9 columns" role="content" >
+
+ 	<% @posts.each do |post| %><!-- for each post in the db -->
       <article>
  
-        <h3><a href="#"><%= post = Post.first.title %></a></h3>
-        <h6>Written by <a href="#">John Smith</a> <%= Time.now.strftime("%d/%m/%Y") %></h6>
+        <h3><a href="#"><%= post.title %></a></h3>
+        <h6>Written by <a href="#">Catherine Jones</a> <%= Time.now.strftime("%d/%m/%Y") %></h6>
  
         <div class="row">
           <div class="large-6 columns">
-            <p><%= post = Post.first.body %></p>
-            <p></p>
+            <p><%= post = post.body %></p>
           </div>
           <div class="large-6 columns">
-            <img src="http://placehold.it/400x240&text=[img]" />
+ 
           </div>
         </div>
- 
-        <p></p>
- 
-        <p></p>
-  <%= link_to 'New Post', new_post_path %>
+
+         <%= link_to 'Show', post %>
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
       </article>
- 
+<% end %>
+<%= link_to 'New Post', new_post_path %>
     </div>
  
     <!-- End Main Content -->
