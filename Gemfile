@@ -32,9 +32,8 @@ end
 
 gem 'jquery-rails'
 #this helps with pictures
-gem 'carrierwave'
-#user authentication
-gem 'devise'
+
+
 
 
 # To use ActiveModel has_secure_password
