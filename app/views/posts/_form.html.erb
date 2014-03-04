@@ -19,8 +19,10 @@
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </div>
-  <%= f.file_field :picture %>
-  <div class="actions">
+  <div class="field">
+    <%= f.label :picture %><br />
+    <%= f.file_field :picture %>
+  </div>
     <%= f.submit %>
   </div>
 <% end %>

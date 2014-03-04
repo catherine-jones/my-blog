@@ -9,7 +9,6 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
-      format.atom 
     end
   end
 
@@ -84,9 +83,4 @@ class PostsController < ApplicationController
     end
   end
 end
-  private
-  def authenticate
-    authenticate_or_request_with_http_basic do |name, password|
-      name == "admin" && password == "secret"
-    end
-  end
+

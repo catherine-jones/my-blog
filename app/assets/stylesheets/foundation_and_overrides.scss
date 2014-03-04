@@ -968,7 +968,7 @@
 //
 
 // Background color for the top bar
-// $topbar-bg:#7bcffe; 
+// $topbar-bg: #111;
 
 // Height and margin
 // $topbar-height: 45px;
@@ -982,30 +982,30 @@
 // $topbar-title-font-size: emCalc(17px);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #7bcffe;
+// $topbar-link-color: #fff;
 // $topbar-link-weight: bold;
 // $topbar-link-font-size: emCalc(13px);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #7bcffe;
-// $topbar-dropdown-link-color: #7bcffe;
+// $topbar-dropdown-bg: #333;
+// $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #7bcffe;
+// $topbar-dropdown-toggle-color: #fff;
 // $topbar-dropdown-toggle-alpha: 0.5;
-// $dropdown-label-color: #7bcffe;
+// $dropdown-label-color: #555;
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: emCalc(13px);
 // $topbar-menu-link-weight: bold;
-// $topbar-menu-link-color: #7bcffe;
-// $topbar-menu-icon-color: #7bcffe;
-// $topbar-menu-link-color-toggled: #7bcffe;
-// $topbar-menu-icon-color-toggled: #7bcffe;
+// $topbar-menu-link-color: #fff;
+// $topbar-menu-icon-color: #fff;
+// $topbar-menu-link-color-toggled: #888;
+// $topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
-// $topbar-breakpoint: emCalc(800px); // Change to 9999px for always mobile layout
+// $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
 
 

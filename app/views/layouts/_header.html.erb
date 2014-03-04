@@ -1,24 +1,30 @@
-<div class="row">
-    <div class="large-12 columns">
-      <div class="nav-bar right">
-       <ul class="button-group">
-         <li><a target="_blank" href="https://github.com/catherine-jones" class="button">Github</a></li>
-         <li><a target="_blank" href="https://twitter.com/CathJones0" class="button">Twitter</a></li>
-         <li><a target="_blank" href="/about" class="button">About me</a></li>
-         <li><a target="_blank" href="http://www.catherinejonesdesigns.com.au" class="button">Portfolio</a></li>
-        </ul>
-      </div>
-      <h1>Catherine &nbsp;<small>A Digital Notebook</small></h1>
-               <p class="text-align-right">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-      <hr />
+<nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1>
+        <%= link_to 'Catherine Jones Digital Notebook', root_path %>
+      </h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <li>
+        <%= link_to 'Github', 'https://github.com/catherine-jones' %>
+      </li>
 
-    </div>
-  </div>
+      <li class="divider hide-for-small"></li>
+      <li>
+        <%= link_to 'Twitter', 'https://twitter.com/CathJones0' %>
+      </li>
+
+      <li class="divider hide-for-small"></li>
+      <li>
+        <%= link_to 'About me', '/about' %>
+      </li>
+    </ul>
+  </section>
+</nav>
