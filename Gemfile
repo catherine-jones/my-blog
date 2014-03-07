@@ -11,6 +11,8 @@ gem 'devise'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'mini_magick', '3.5.0'
+
 group :development, :test do
   gem 'sqlite3'
 end
