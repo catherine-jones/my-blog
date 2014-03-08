@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   # GET /posts.atom
   def index
-    @posts = Post.all
+    @posts = Post.all || [] #adding an empty array helps if the posts table is empty
 
     respond_to do |format|
       format.html # index.html.erb
