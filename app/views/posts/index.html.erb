@@ -6,8 +6,7 @@
 
  	<% @posts.each do |post| %><!-- for each post in the db -->
       <article>
- 
-        <h3><a href="#"><%= post.title %></a></h3>
+        <h3><%= link_to post.title,post %></h3>
         <h6>Written by <a href="#">Catherine Jones</a> <%= post.created_at.strftime("%d/%m/%Y") %></h6>
  
         <div class="row">
@@ -17,10 +16,11 @@
             <%= image_tag post.picture_url(:thumb) if post.picture? %>
           </div>
         </div>
-
-    <%= link_to 'Show', post %>
+    <% if user_signed_in? %>
+    
     <%= link_to 'Edit', edit_post_path(post) %>
     <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
       </article>
 <% end %>
 <%= link_to 'New Post', new_post_path %>
