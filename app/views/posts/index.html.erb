@@ -7,11 +7,9 @@
  	<% @posts.each do |post| %><!-- for each post in the db -->
       <article>
         <h3><%= link_to post.title,post %></h3>
-        <h6>Written by <a href="#">Catherine Jones</a> <%= post.created_at.strftime("%d/%m/%Y") %></h6>
+        <div id="day"><%= post.created_at.strftime("%e") %></div><div id="month"><%= post.created_at.strftime("%b") %></div><div id="year"><%= post.created_at.strftime("%Y") %></div><h6>Written by <a href="#">Catherine Jones</a> </h6>
  
         <div class="row">
-          <div class="large-6 columns">
-          </div>
           <div class="large-6 columns">
             <%= image_tag post.picture_url(:thumb) if post.picture? %>
           </div>
