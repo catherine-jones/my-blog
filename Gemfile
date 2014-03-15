@@ -11,6 +11,12 @@ gem 'devise'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+#comments
+gem 'disqus', '1.0.4'
+
+#meetup events
+gem 'ruby_meetup2', '0.5.0'
+
 gem 'mini_magick', '3.5.0'
 
 group :development, :test do
