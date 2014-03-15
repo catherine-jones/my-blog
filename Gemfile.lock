@@ -131,7 +131,7 @@ DEPENDENCIES
   jquery-rails
   mini_magick (= 3.5.0)
   pg
-  rails (= 3.2.13)
+  rails
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)

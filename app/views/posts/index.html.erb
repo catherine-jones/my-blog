@@ -6,8 +6,18 @@
 
  	<% @posts.each do |post| %><!-- for each post in the db -->
       <article>
-        <h3><%= link_to post.title,post %></h3>
-        <div id="day"><%= post.created_at.strftime("%e") %></div><div id="month"><%= post.created_at.strftime("%b") %></div><div id="year"><%= post.created_at.strftime("%Y") %></div><h6>Written by <a href="#">Catherine Jones</a> </h6>
+        <div class="date">
+        <div id="day">
+          <%= post.created_at.strftime("%e") %>
+        </div>
+        <div class="daymonth">
+        <div id="month"><%= post.created_at.strftime("%b") %>
+        </div>
+        <div id="year"><%= post.created_at.strftime("%Y") %></div>
+      </div>
+      </div>
+      <h3><%= link_to post.title,post %></h3>
+      <h6>Written by <a href="#">Catherine Jones</a> </h6>
  
         <div class="row">
           <div class="large-6 columns">
@@ -19,7 +29,7 @@
     <%= link_to 'Edit', edit_post_path(post) %>
     <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
-      </article>
+    </article>
 <% end %>
 <%= link_to 'New Post', new_post_path %>
     </div>

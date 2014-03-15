@@ -58,15 +58,27 @@ html, body{background-color:#fde3e5;}
 article {border-top:3px solid black;}
 
 #day{font-size:4em;
-float:left;}
-
-#month, #year{font-size:1.5em;
+display:inline-block;
 }
 
+#month, #year{font-size:1.5em;
+
+}
+
+.daymonth{display:inline-block;}
 
 #month {padding-top:1%;
 }
 
-h3{text-align:center}
+h3{text-align:left;
+display:inline-block;
+width:75%;
+margin-left:21%}
 
+article{position:relative;}
+
+.date{
+display:inline-block;
+width:20%;
+position:absolute;}
 
