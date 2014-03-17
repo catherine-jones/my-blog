@@ -2,7 +2,6 @@
 # in production environments by default.
 source 'https://rubygems.org'
 
-
 gem 'rails'
 #this helps with pictures
 gem 'carrierwave'
