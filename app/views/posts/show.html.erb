@@ -1,6 +1,30 @@
  <p id="notice"><%= notice %></p>
-
+ <div class="row" >
+  <div class="large-9 columns" role="content" >
+<article>
  <%= render :partial => @post %>
 <%= image_tag(@post.picture_url, :width => 600) if @post.picture.present? %>
  <%= link_to 'Edit', edit_post_path(@post) %> |
  <%= link_to 'Back', posts_path %>
+</article>
+</div>
+<aside class="large-3 columns">
+ 
+      <h5>Categories</h5>
+      <ul class="side-nav">
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Ruby on Rails</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">HTML/CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+ 
+      <div class="panel">
+        <h5>Events</h5>
+        
+        <a href="#">Read More →</a>
+      </div>
+   </aside>
+ 
+ </div>
+    

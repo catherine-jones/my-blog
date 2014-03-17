@@ -56,7 +56,8 @@ a, p, .side-nav li a{color:black;}
 
 html, body{background-color:#fde3e5;}
 
-article {border-top:3px solid black;}
+article {border-top:3px solid black;
+margin-top:2%;}
 
 #day{font-size:4em;
 display:inline-block;
@@ -83,9 +84,15 @@ display:inline-block;
 width:20%;
 position:absolute;}
 
-.large-9{margin-top:1.4%}
+.large-9{margin-top:.6%}
 
 a:hover{text-decoration:underline;
 color:black;}
 
 span{color:black;}
+
+.edit{
+  margin-top:1%;
+}
+
+input{border-radius:10px;}

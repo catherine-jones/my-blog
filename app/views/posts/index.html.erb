@@ -19,13 +19,14 @@
       <h3><%= link_to post.title,post %></h3>
         <div class="row">
           <div class="large-6 columns">
-          </div>
         </div>
+        </div>
+        <div class="edit">
     <% if user_signed_in? %>
-    
-    <%= link_to 'Edit', edit_post_path(post) %>
-    <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
+  </div>
     </article>
 <% end %>
 <%= link_to 'New Post', new_post_path %>
