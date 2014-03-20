@@ -16,6 +16,9 @@ gem 'disqus', '1.0.4'
 #meetup events
 gem 'ruby_meetup2', '0.5.0'
 
+#social media sharing 
+gem 'social-share-button'
+
 gem 'mini_magick', '3.5.0'
 
 group :development, :test do
