@@ -4,7 +4,12 @@ class PostsController < ApplicationController
   # GET /posts.atom
   def index
     @posts = Post.all || [] #adding an empty array helps if the posts table is empty
-
+  if params[:tagged]
+    @posts = Post.includes(:tags).where('tags.name = ?', params[:tagged])
+  else
+    @posts = Post.all
+  end
+  
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }

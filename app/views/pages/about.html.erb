@@ -24,11 +24,11 @@
  
       <h5>Categories</h5>
       <ul class="side-nav">
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Ruby on Rails</a></li>
-        <li><a href="#">Design</a></li>
-        <li><a href="#">HTML/CSS</a></li>
-        <li><a href="#">JavaScript</a></li>
+        <li><%= link_to 'Artcles', posts_path(tagged: 'Ruby on Rails') %></li> 
+        <li><%= link_to 'Ruby on Rails', posts_path(tagged: 'Ruby on Rails') %></li>
+        <li><%= link_to 'Design', posts_path(tagged: 'Design') %></li>
+        <li><%= link_to 'HTML/CSS', posts_path(tagged: 'HTML/CSS') %></li>
+        <li><%= link_to 'JavaSript', posts_path(tagged: 'JavaScript') %></li>
       </ul>
  
       <div class="panel">
