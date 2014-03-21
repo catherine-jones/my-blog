@@ -5,3 +5,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 MyBlog::Application.load_tasks
+
+require 'rdoc/task'
+RDoc::Task.new do |rdoc|
+  ...
