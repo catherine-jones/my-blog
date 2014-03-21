@@ -10,5 +10,5 @@
  *
  *= require_self
  *= require foundation_and_overrides
- *= require jquery.sharebox.css
+ *= require jquery.sharebox.min.css
 */
