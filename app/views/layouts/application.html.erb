@@ -28,8 +28,14 @@
 	     <div id="main">
     	   <%= yield %>
         </div>
-    
+
       <%= render :partial => 'layouts/footer' %>
     </div>
   </body>
+  <%= javascript_include_tag 'jquery.sharebox.min' %>
+  <script>
+    $('.demo').sharebox({
+      services : "facebook twitter google+ linkedin"
+    });
+  </script>
 </html>

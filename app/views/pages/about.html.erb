@@ -1,6 +1,7 @@
  <div class="row" >
- 
+
     <!-- Main Blog Content -->
+
     <div class="large-9 columns" role="content" >
       <h2>About Me</h2>
       <section>
@@ -11,35 +12,15 @@
     <section>
       <p>I am passionate about getting more women involved in the Austalian Tech community and mentor at Ruby on Rails Installfest.</p>
 
-      <p>When I am not coding I enjoy knitting, skating and the Sydney Rockabilly scene. 
+      <p>When I am not coding I enjoy knitting, skating and the Sydney Rockabilly scene.</p>
     </section>
-    </div>
- 
-    <!-- End Main Content -->
- 
- 
-    <!-- Sidebar -->
- 
-    <aside class="large-3 columns">
- 
-      <h5>Categories</h5>
-      <ul class="side-nav">
-        <li><%= link_to 'Artcles', posts_path(tagged: 'Ruby on Rails') %></li> 
-        <li><%= link_to 'Ruby on Rails', posts_path(tagged: 'Ruby on Rails') %></li>
-        <li><%= link_to 'Design', posts_path(tagged: 'Design') %></li>
-        <li><%= link_to 'HTML/CSS', posts_path(tagged: 'HTML/CSS') %></li>
-        <li><%= link_to 'JavaSript', posts_path(tagged: 'JavaScript') %></li>
-      </ul>
- 
-      <div class="panel">
-        <h5>Events</h5>
-        
-        <a href="#">Read More →</a>
-      </div>
- 
-    </aside>
- 
-    <!-- End Sidebar -->
+
   </div>
- 
+
+  <!-- End Main Content -->
+
+  <%= render partial: 'shared/sidebar' %>
+
+  </div>
+
   <!-- End Main Content and Sidebar -->

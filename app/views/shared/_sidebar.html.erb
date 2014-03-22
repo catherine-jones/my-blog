@@ -1,0 +1,21 @@
+<!-- Sidebar -->
+
+<aside class="large-3 columns">
+
+  <h5>Categories</h5>
+  <ul class="side-nav">
+    <li><%= link_to 'Articles', posts_path %></li>
+    <li><%= link_to 'Ruby on Rails', posts_path(:tag => 'Ruby on Rails') %></li>
+    <li><%= link_to 'Design', posts_path(tag: 'Design') %></li>
+    <li><%= link_to 'HTML/CSS', posts_path(tag: 'HTML/CSS') %></li>
+    <li><%= link_to 'Javascript', posts_path(tag: 'Javascript') %></li>
+  </ul>
+
+  <div class="panel">
+    <h5>Events</h5>
+    <a href="#">Read More →</a>
+  </div>
+
+</aside>
+
+<!-- End Sidebar -->
