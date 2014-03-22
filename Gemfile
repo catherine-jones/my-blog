@@ -2,7 +2,7 @@
 # in production environments by default.
 source 'https://rubygems.org'
 
-gem 'rails'
+gem 'rails', '~> 3.2.1'
 #this helps with pictures
 gem 'carrierwave'
 #user authentication
