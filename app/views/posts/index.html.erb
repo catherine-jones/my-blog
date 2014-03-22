@@ -1,66 +1,53 @@
+<div class="row" >
 
-  <div class="row" >
- 
-    <!-- Main Blog Content -->
-    <div class="large-9 columns" role="content" >
+  <!-- Main Blog Content -->
 
- 	<% @posts.each do |post| %><!-- for each post in the db -->
+  <div class="large-9 columns" role="content" >
+
+ 	  <% @posts.each do |post| %>
+
       <article>
         <div class="date">
-        <div id="day">
-          <%= post.created_at.strftime("%e") %>
+          <div id="day">
+            <%= post.created_at.strftime("%e") %>
+          </div>
+          <div id="month">
+            <%= post.created_at.strftime("%b") %>
+          </div>
+          <div id="year">
+            <%= post.created_at.strftime("%Y") %>
+          </div>
         </div>
-        <div class="daymonth">
-        <div id="month"><%= post.created_at.strftime("%b") %>
-        </div>
-        <div id="year"><%= post.created_at.strftime("%Y") %></div>
-      </div>
-      </div>
-      <h3><%= link_to post.title,post %></h3>
+
+        <h3>
+          <%= link_to post.title,post %>
+        </h3>
         <div class="row">
           <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
           <div class="large-6 columns">
-        </div>
+          </div>
         </div>
         <div class="edit">
-    <% if user_signed_in? %>
-      <%= link_to 'Edit', edit_post_path(post) %>
-      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% if user_signed_in? %>
+            <%= link_to 'Edit', edit_post_path(post) %>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      </article>
+
     <% end %>
+
+    <% if user_signed_in? %>
+      <%= link_to 'New Post', new_post_path %>
+    <% end %>
+
   </div>
-    </article>
-<% end %>
-<% if user_signed_in? %>
-  <%= link_to 'New Post', new_post_path %>
-<% end %>
-    </div>
- 
-    <!-- End Main Content -->
- 
- 
-    <!-- Sidebar -->
- 
-    <aside class="large-3 columns">
- 
-      <h5>Categories</h5>
-      <ul class="side-nav">
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Ruby on Rails</a></li>
-        <li><a href="#">Design</a></li>
-        <li><a href="#">HTML/CSS</a></li>
-        <li><a href="#">JavaScript</a></li>
-      </ul>
- 
-      <div class="panel">
-        <h5>Events</h5>
-        
-        <a href="#">Read More →</a>
-      </div>
- 
-    </aside>
- 
-    <!-- End Sidebar -->
-  </div>
- 
-  <!-- End Main Content and Sidebar -->
+
+  <!-- End Main Content -->
+
+  <%= render partial: 'shared/sidebar' %>
+
+</div>
+
+<!-- End Main Content and Sidebar -->
 

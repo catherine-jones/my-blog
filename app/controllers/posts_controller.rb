@@ -3,7 +3,11 @@ class PostsController < ApplicationController
   # GET /posts.json
   # GET /posts.atom
   def index
-    @posts = Post.all || [] #adding an empty array helps if the posts table is empty
+    if params[:tag].present?
+      @posts = Post.tagged_with(params[:tag])
+    else
+      @posts = Post.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -11,14 +15,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def tagged
-    if params[:tag].present? 
-      @posts = Post.tagged_with(params[:tag])
-    else 
-      @posts = Post.postall
-   end  
-  end
-  
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -41,11 +37,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1/edit
-  def edit
-    @post = Post.find(params[:id])
-  end
-
   # POST /posts
   # POST /posts.json
   def create
@@ -60,6 +51,11 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  # GET /posts/1/edit
+  def edit
+    @post = Post.find(params[:id])
   end
 
   # PUT /posts/1
@@ -90,7 +86,3 @@ class PostsController < ApplicationController
     end
   end
 end
-
-
-
-
