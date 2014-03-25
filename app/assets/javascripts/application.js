@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.sharebox.min
 //= require foundation
 $(document).foundation();
