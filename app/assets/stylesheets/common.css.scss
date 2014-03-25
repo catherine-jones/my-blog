@@ -60,14 +60,17 @@ article {border-top:3px solid black;
 margin-top:2%;}
 
 #day{font-size:4em;
-display:inline-block;
+float:left;
+
 }
 
 #month, #year{font-size:1.5em;
-
+ text-align:right;
+padding-top:1%;
 }
 
-.daymonth{display:inline-block;}
+.daymonth{display:inline-block;
+ border:solid 1px black;}
 
 #month {padding-top:1%;
 }

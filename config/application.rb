@@ -60,5 +60,6 @@ module MyBlog
     config.assets.version = '1.0'
     #this is needed for heroku wen using anythin < rails 4
     config.assets.initialize_on_precompile = false
+    config.assets.precompile += %w( jquery.sharebox.min )
   end
 end

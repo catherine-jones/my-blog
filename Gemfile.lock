@@ -139,7 +139,7 @@ DEPENDENCIES
   jquery-rails
   mini_magick (= 3.5.0)
   pg
-  rails
+  rails (~> 3.2.1)
   ruby_meetup2 (= 0.5.0)
   sass-rails (~> 3.2.3)
   social-share-button
