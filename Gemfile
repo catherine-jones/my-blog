@@ -25,7 +25,6 @@ gem 'mini_magick', '3.5.0'
 
 gem 'acts-as-taggable-on'
 
-gem 'typhoeus', '~> 0.6.8'
 
 group :development, :test do
   gem 'sqlite3'

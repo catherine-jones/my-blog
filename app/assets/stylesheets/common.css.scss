@@ -56,8 +56,10 @@ a, p, .side-nav li a{color:black;}
 
 html, body{background-color:#fde3e5;}
 
-article {border-top:3px solid black;
+#indexarticle {border-top:3px solid black;
 margin-top:2%;}
+
+article p{text-align:justify;}
 
 #day{font-size:4em;
 float:left;
@@ -100,3 +102,9 @@ span{color:black;}
 }
 
 input{border-radius:10px;}
+
+.image{
+  width:400px;
+  margin: 0 auto;
+  
+}

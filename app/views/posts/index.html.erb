@@ -6,7 +6,7 @@
 
  	  <% @posts.each do |post| %>
 
-      <article>
+      <article class="indexarticle">
         <div class="date">
           <div id="day">
             <%= post.created_at.strftime("%e") %>
@@ -23,7 +23,7 @@
           <%= link_to post.title,post %>
         </h3>
         <div class="row">
-          <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+          
           <div class="large-6 columns">
           </div>
         </div>
