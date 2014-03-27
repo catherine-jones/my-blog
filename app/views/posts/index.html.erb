@@ -8,14 +8,16 @@
 
       <article class="indexarticle">
         <div class="date">
-          <div id="day">
+          <div class="day">
             <%= post.created_at.strftime("%e") %>
           </div>
-          <div id="month">
-            <%= post.created_at.strftime("%b") %>
-          </div>
-          <div id="year">
-            <%= post.created_at.strftime("%Y") %>
+          <div class="monthandyear">
+            <div class="month">
+              <%= post.created_at.strftime("%b") %>
+            </div>
+            <div class="year">
+              <%= post.created_at.strftime("%Y") %>
+            </div>
           </div>
         </div>
 

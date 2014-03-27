@@ -56,38 +56,41 @@ a, p, .side-nav li a{color:black;}
 
 html, body{background-color:#fde3e5;}
 
-#indexarticle {border-top:3px solid black;
+.indexarticle {border-top:3px solid black;
 margin-top:2%;}
 
 article p{text-align:justify;}
 
-#day{font-size:4em;
-float:left;
-
+.day{font-size:4em;
+display:inline-block;
 }
 
-#month, #year{font-size:1.5em;
- text-align:right;
+.monthandyear{display:inline-block;}
+
+.month, .year{font-size:1.5em;
+text-align:right;
 padding-top:1%;
 }
 
 .daymonth{display:inline-block;
- border:solid 1px black;}
+}
 
-#month {padding-top:8%;
+.month {padding-top:8%;
 }
 
 h3{text-align:left;
 display:inline-block;
-margin-top:2%;
+margin-top:1.5%;
 width:75%;
-margin-left:21%}
+margin-left:21%;
+font-size:2.5em;
+font-family:'Amaranth', sans-serif;}
 
 article{position:relative;}
 
 .date{
 display:inline-block;
-width:17%;
+width:19%;
 position:absolute;}
 
 .large-9{margin-top:.6%}
@@ -98,7 +101,7 @@ color:black;}
 span{color:black;}
 
 .edit{
-  margin-top:1%;
+margin-top:1%;
 }
 
 input{border-radius:10px;}
