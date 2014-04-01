@@ -33,11 +33,15 @@ GEM
     arel (3.0.3)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2-x86-mingw32)
+    better_errors (1.1.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
     builder (3.0.4)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
+    coderay (1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -56,6 +60,9 @@ GEM
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
+    httparty (0.13.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (3.1.0)
@@ -69,6 +76,7 @@ GEM
     mini_magick (3.5.0)
       subexec (~> 0.2.1)
     multi_json (1.8.4)
+    multi_xml (0.5.5)
     orm_adapter (0.4.0)
     pg (0.16.0-x86-mingw32)
     polyglot (0.3.4)
@@ -124,6 +132,9 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    xray-rails (0.1.13)
+      coffee-rails
+      rails (>= 3.1.0)
     zurb-foundation (4.0.9)
       sass (>= 3.2.0)
 
@@ -132,10 +143,12 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on
+  better_errors
   carrierwave
   coffee-rails (~> 3.2.1)
   devise
   disqus (= 1.0.4)
+  httparty
   jquery-rails
   mini_magick (= 3.5.0)
   pg
@@ -145,4 +158,5 @@ DEPENDENCIES
   social-share-button
   sqlite3
   uglifier (>= 1.0.3)
+  xray-rails
   zurb-foundation (~> 4.0.0)

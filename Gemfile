@@ -25,6 +25,11 @@ gem 'mini_magick', '3.5.0'
 
 gem 'acts-as-taggable-on'
 
+gem  'httparty'
+
+gem 'better_errors'
+
+gem 'xray-rails'
 
 group :development, :test do
   gem 'sqlite3'
