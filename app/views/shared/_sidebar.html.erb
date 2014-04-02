@@ -14,13 +14,33 @@
   <div class="panel">
     <h5>Events</h5>
     <div class="feed">
-      <%= @eventdata['results'] %>
+
+      <%= @eventdata.each do || %>
+      <%= puts  %>
+      <% end %>
     </div>
     <a href="#">Read More →</a>
   </div>
 
 </aside>
-
+if response.code == "200"
+result = JSON.parse(response.body)
+result.each do |doc|
+puts doc["id"] #reference properties like this
+puts doc # this is the result in object form
+puts ""
+puts ""
+end
+else
+puts "ERROR!!!"
+end
+html +=  entry.group.name + '<br/>'; 
+              html +=  entry.name + '<br/>'; 
+              html +=  entry.time + '<br/>';//need to do something to make the time display in a readable format
+              html +=  entry.venue.name + '<br/>';
+              html +=  entry.venue.addres_1 + '<br/>';
+              html +=  entry.venue.addres_2 + '<br/>';
+              html += '<a href="' + entry.event_url + '">Details</a><br/>';
 <!-- End Sidebar -->
 
 

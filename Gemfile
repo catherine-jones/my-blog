@@ -15,6 +15,8 @@ gem 'devise'
 #comments
 gem 'disqus', '1.0.4'
 
+require 'json'
+
 #meetup events
 gem 'ruby_meetup2', '0.5.0'
 
