@@ -13,8 +13,14 @@
 
   <div class="panel">
     <h5>Events</h5>
-    <div class="feed">
-     # display @events
+      <% @meetup_api.events.each do |event| %>
+        <p>
+          <em>
+            <%= event.start.to_s(:short) %> - <%= link_to 'map', event.map_url %>
+          </em><br/>
+          <strong><%= link_to event.name, event.url %></strong>
+        </p>
+      <% end %>
     </div>
     <a href="#">Read More →</a>
   </div>
