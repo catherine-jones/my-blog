@@ -15,6 +15,8 @@ gem 'devise'
 #comments
 gem 'disqus', '1.0.4'
 
+require 'json'
+
 #meetup events
 gem 'ruby_meetup2', '0.5.0'
 
@@ -24,6 +26,10 @@ gem 'social-share-button'
 gem 'mini_magick', '3.5.0'
 
 gem 'acts-as-taggable-on'
+
+gem 'better_errors'
+
+gem 'xray-rails'
 
 gem 'httparty'
 
@@ -66,3 +72,4 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+

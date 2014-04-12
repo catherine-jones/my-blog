@@ -5,5 +5,6 @@ class ApplicationController < ActionController::Base
 
   def collect_meetup_events
   	@meetup_api = ::MeetupApi.new
+
   end
 end
