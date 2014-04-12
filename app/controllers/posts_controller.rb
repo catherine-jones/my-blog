@@ -6,7 +6,7 @@ class PostsController < ApplicationController
     if params[:tag].present?
       @posts = Post.tagged_with(params[:tag])
     else
-      @posts = Post.all
+      @posts = Post.all :order => "created_at ASC"
     end
     respond_to do |format|
       format.html # index.html.erb
@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find(params[:id] )
 
     respond_to do |format|
       format.html # show.html.erb
