@@ -23,8 +23,8 @@ class MeetupApi
         name: e['name'],
         start: Time.at(e['time'] / 1_000),
         url: e['event_url'],
-        address: e['venue']['address_1'],
-        map_url: "http://maps.google.com?q=#{URI.encode(e['venue']['address_1'])}"
+        address: e['venue'] ? e['venue']['address_1'] : nil,
+        map_url: "http://maps.google.com?q=#{URI.encode(e['venue'] ? e['venue']['address_1'] : "")}"
       )
     end
   end
