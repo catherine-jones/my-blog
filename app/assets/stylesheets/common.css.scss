@@ -13,7 +13,6 @@ div#content{
 
 footer {
   margin-top: 50px;
-  background-color:#fde3e5;
   color: #eee;
   text-align: center;
   position: fixed;
@@ -95,8 +94,11 @@ position:absolute;}
 
 .large-9{margin-top:.6%}
 
-a:hover{text-decoration:underline;
+ul a:hover{text-decoration:underline;
 color:black;}
+
+a:hover{text-decoration:none;
+color:grey;}
 
 span{color:black;}
 
