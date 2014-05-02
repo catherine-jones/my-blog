@@ -26,9 +26,10 @@
   	 <%= render :partial => 'layouts/header' %>
 	     <div id="main">
     	   <%= yield %>
+         <%= render :partial => 'layouts/footer' %>
+
         </div>
 
-      <%= render :partial => 'layouts/footer' %>
     </div>
     <%= javascript_include_tag "application" %>
   </body>
