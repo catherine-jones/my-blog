@@ -2,6 +2,10 @@
 # in production environments by default.
 source 'https://rubygems.org'
 
+gem 'carrierwave_direct'
+
+gem 'fog'
+
 gem 'rails', '~> 3.2.1'
 #this helps with pictures
 
