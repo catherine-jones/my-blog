@@ -3,6 +3,8 @@ MyBlog::Application.routes.draw do
 
 get "pages/about"
 
+get "pages/sample"
+
   get "page/info"
   resources :posts
 root :to => redirect('/posts')

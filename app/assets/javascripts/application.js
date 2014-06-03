@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery.sharebox.min
 //= require foundation
+//= require sample
 $(document).foundation();
