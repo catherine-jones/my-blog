@@ -7,6 +7,13 @@ class PostsController < ApplicationController
       @posts = Post.tagged_with(params[:tag])
     else
       @posts = Post.all :order => "created_at DESC"
+
+      @months = {}
+      @posts.each do |post|
+        month = post.created_at.month
+        @months[month] = [] unless @months[month]
+        @months[month] << post
+      end
     end
     respond_to do |format|
       format.html # index.html.erb

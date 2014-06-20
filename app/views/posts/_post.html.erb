@@ -1,6 +1,9 @@
 <h2><%= link_to_unless_current post.title, post %></h2>
 
 <%= simple_format post.body %>
+ <% post.tags.each do |tag| %>
+   <%= tag %> 
+ <% end %>
 
 <div class="demo"></div>
 

@@ -4,39 +4,41 @@
 
   <div class="large-9 columns" role="content" >
 
- 	  <% @posts.each do |post| %>
-
-      <article class="indexarticle">
-        <div class="date">
-          <div class="day">
-            <%= post.created_at.strftime("%e") %>
-          </div>
-          <div class="monthandyear">
-            <div class="month">
-              <%= post.created_at.strftime("%b") %>
+ 	  <% @months.each do |month, posts| %>
+       <h3><%= Date::MONTHNAMES[month] %></h3>
+       <% posts.each do |post| %>
+        <article class="indexarticle">
+          <div class="date">
+            <div class="day">
+              <%= post.created_at.strftime("%e") %>
             </div>
-            <div class="year">
-              <%= post.created_at.strftime("%Y") %>
+            <div class="monthandyear">
+              <div class="month">
+                <%= post.created_at.strftime("%b") %>
+              </div>
+              <div class="year">
+                <%= post.created_at.strftime("%Y") %>
+              </div>
             </div>
           </div>
-        </div>
 
-        <h3>
-          <%= link_to post.title,post %>
-        </h3>
-        <div class="row">
-          
-          <div class="large-6 columns">
+          <h3>
+            <%= link_to post.title,post %>
+          </h3>
+          <div class="row">
+
+            <div class="large-6 columns">
+            </div>
           </div>
-        </div>
-        <div class="edit">
-          <% if user_signed_in? %>
-            <%= link_to 'Edit', edit_post_path(post) %>
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
-        </div>
-      </article>
+          <div class="edit">
+            <% if user_signed_in? %>
+              <%= link_to 'Edit', edit_post_path(post) %>
+              <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </div>
+        </article>
 
+      <% end %>
     <% end %>
 
     <% if user_signed_in? %>
@@ -52,4 +54,3 @@
 </div>
 
 <!-- End Main Content and Sidebar -->
-
