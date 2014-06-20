@@ -22,6 +22,7 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'sqlite3'
   gem "spring"
+  gem "lipsum"
 end
 
 group :production do
